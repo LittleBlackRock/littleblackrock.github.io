@@ -80,66 +80,43 @@
 <main id="main">
             <a href="javascript:void(0)" id="closebtn" onclick="navToggle()"><i class="fas fa-bars fa-lg"></i></a>
             <div class="content">
-    <div class="section">
-        <dev class="section-title">blog</dev>
-        
-            <div class="list-item">
-                <a class="entry-title" href="/blog/%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2/">发布博客</a>
-                
-                
-                <div class="meta">
-                
-                    <i class="far fa-calendar-alt"></i> Mar 1 2021
-                
-                <br>
-                
-                </div>
-            </div>
-        
-            <div class="list-item">
-                <a class="entry-title" href="/blog/my_first_blog/">my first blog</a>
-                
-                
-                <div class="meta">
-                
-                    <i class="far fa-calendar-alt"></i> Mar 1 2021
-                
-                <br>
-                
-                </div>
-            </div>
-        
-            <div class="list-item">
-                <a class="entry-title" href="/blog/idea%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/">IDEA常用功能</a>
-                
-                
-                <div class="meta">
-                
-                    <i class="far fa-calendar-alt"></i> Mar 1 2021
-                
-                <br>
-                
-                </div>
-            </div>
-        
-            <div class="list-item">
-                <a class="entry-title" href="/blog/git%E9%80%9F%E6%88%90%E7%AC%94%E8%AE%B0/">Git速成笔记</a>
-                
-                
-                <div class="meta">
-                
-                    <i class="far fa-calendar-alt"></i> Mar 1 2021
-                
-                <br>
-                
-                </div>
-            </div>
-        
+    
+    <h1 id="title">发布博客</h1>
+    
+      
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-创建md文件编辑blog内容">1. 创建.md文件，编辑blog内容</a></li>
+    <li><a href="#2-生成静态页面">2. 生成静态页面</a></li>
+    <li><a href="#3-发布到github">3. 发布到GitHub</a></li>
+  </ul>
+</nav>
+    <h1 id="发布博客">发布博客</h1>
+<h2 id="1-创建md文件编辑blog内容">1. 创建.md文件，编辑blog内容</h2>
+<pre><code>hugo new blog/newBlog.md
+</code></pre><h2 id="2-生成静态页面">2. 生成静态页面</h2>
+<pre><code>hugo --theme=npq-hugo --baseUrl=&quot;https://littleblackrock.github.io/&quot; --buildDrafts
+</code></pre><h2 id="3-发布到github">3. 发布到GitHub</h2>
+<pre><code>cd public
+git add .
+git commit -m &quot;new blog added&quot;
+git push origin master
+</code></pre>
+    
+    <div class="nav-next-prev">
+        <div class="nav-prev">
+            
+                <a href="https://littleblackrock.github.io/blog/my_first_blog/"><i class="fas fa-chevron-left"></i></a>
+            
+        </div>
+        <a class="nav-top" href="#">top</i></a>
+        <div class="nav-next">
+            
+                <a class="grayed-out" href="javascript:void()"><i class="fas fa-chevron-right"></i></a>
+            
+        </div>
     </div>
     
-
-
-
 
             </div><footer>
 <div class="footer-content">

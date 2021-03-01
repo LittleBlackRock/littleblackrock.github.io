@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2021. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 01 Mar 2021 21:15:13 +0800</lastBuildDate><atom:link href="https://littleblackrock.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Mar 2021 22:11:35 +0800</lastBuildDate><atom:link href="https://littleblackrock.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>发布博客</title>
+      <link>https://littleblackrock.github.io/blog/%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Mon, 01 Mar 2021 22:11:35 +0800</pubDate>
+      
+      <guid>https://littleblackrock.github.io/blog/%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2/</guid>
+      <description>发布博客 1. 创建.md文件，编辑blog内容 hugo new blog/newBlog.md 2. 生成静态页面 hugo --theme=npq-hugo --baseUrl=&amp;quot;https://littleblackrock.github.io/&amp;quot; --buildDrafts 3. 发布到GitHub cd public git add . git commit -m &amp;quot;new blog added&amp;quot; git push origin master </description>
+    </item>
+    
     <item>
       <title>my first blog</title>
       <link>https://littleblackrock.github.io/blog/my_first_blog/</link>
