@@ -14,7 +14,7 @@
       <pubDate>Mon, 01 Mar 2021 22:11:35 +0800</pubDate>
       
       <guid>https://littleblackrock.github.io/blog/%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2/</guid>
-      <description>发布博客 1. 创建.md文件，编辑blog内容 hugo new blog/newBlog.md 2. 生成静态页面 hugo --theme=npq-hugo --baseUrl=&amp;quot;https://littleblackrock.github.io/&amp;quot; --buildDrafts 3. 发布到GitHub cd public git add . git commit -m &amp;quot;new blog added&amp;quot; git push origin master </description>
+      <description>发布博客 1. 创建.md文件，编辑blog内容 hugo new blog/newBlog.md 2. 生成静态页面 hugo --theme=npq-hugo --baseUrl=&amp;quot;https://littleblackrock.github.io/&amp;quot; --buildDrafts 3. 发布到GitHub cd public git add . git commit -m &amp;quot;new blog added&amp;quot; git push origin master 发布博客中采过的坑 1. 执行git push origin master时弹出以下错误信息 To https://github.com/LittleBlackRock/littleblackrock.github.io.git ! [rejected] master -&amp;gt; master (fetch first) error: failed to push some refs to &#39;https://github.com/LittleBlackRock/littleblackrock.github.io.git&#39; hint: Updates were rejected because the remote contains work that you do hint: not have locally. This is usually caused by another repository pushing hint: to the same ref.</description>
     </item>
     
     <item>

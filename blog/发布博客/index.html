@@ -89,6 +89,11 @@
     <li><a href="#1-创建md文件编辑blog内容">1. 创建.md文件，编辑blog内容</a></li>
     <li><a href="#2-生成静态页面">2. 生成静态页面</a></li>
     <li><a href="#3-发布到github">3. 发布到GitHub</a></li>
+    <li><a href="#发布博客中采过的坑">发布博客中采过的坑</a>
+      <ul>
+        <li><a href="#1-执行git-push-origin-master时弹出以下错误信息">1. 执行<code>git push origin master</code>时弹出以下错误信息</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     <h1 id="发布博客">发布博客</h1>
@@ -101,7 +106,26 @@
 git add .
 git commit -m &quot;new blog added&quot;
 git push origin master
-</code></pre>
+</code></pre><h2 id="发布博客中采过的坑">发布博客中采过的坑</h2>
+<h3 id="1-执行git-push-origin-master时弹出以下错误信息">1. 执行<code>git push origin master</code>时弹出以下错误信息</h3>
+<pre><code>To https://github.com/LittleBlackRock/littleblackrock.github.io.git
+ ! [rejected]        master -&gt; master (fetch first)
+error: failed to push some refs to 'https://github.com/LittleBlackRock/littleblackrock.github.io.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+</code></pre><blockquote>
+<p>原因：远程仓库的代码与本地版本并不一致</p>
+<p>解决：应在此之前先同步本地库和远程库的内容，即</p>
+<pre><code>cd public
+git add .
+git commit -m &quot;new blog added&quot;
+git pull origin master
+git push origin master
+</code></pre></blockquote>
+
     
     <div class="nav-next-prev">
         <div class="nav-prev">
