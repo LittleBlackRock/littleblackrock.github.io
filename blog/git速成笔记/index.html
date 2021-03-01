@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="your description">
+    <meta name="Author" content="罗旗良">
+    <meta name="keywords" content="hugo blog">
+    <link rel="stylesheet" href=https://littleblackrock.github.io/css/syntax.css>
+    <link rel="stylesheet" href=https://littleblackrock.github.io/css/style.css>
+    <script src="https://kit.fontawesome.com/1b7478c139.js" crossorigin="anonymous"></script>
+    <title>Qiliang Luo</title>
+  </head><body><aside id="sidenav">
+    <header>
+    
+        <a href=https://littleblackrock.github.io/><img src="https://littleblackrock.github.io/avatar.png" alt="avatar"></a>
+        
+    
+
+    <a id="branding" href=https://littleblackrock.github.io/>
+        
+            Qiliang Luo
+        
+    </a>
+    </header>
+
+    <nav>
+        
+            		
+            <a href="/"
+                
+            >
+                <i class="fas fa-home fa-sm"></i>
+                <span>home</span>
+            </a>
+        
+            		
+            <a href="/blog/"
+                
+            >
+                <i class="fas fa-keyboard fa-ms"></i>
+                <span>blog</span>
+            </a>
+        
+            		
+            <a href="/tags"
+                
+            >
+                <i class="fas fa-tags fa-ms"></i>
+                <span>tags</span>
+            </a>
+        
+            		
+            <a href="https://github.com/yourgithubusername23434"
+                
+                    target="_blank"
+                
+            >
+                <i class="fab fa-github fa-ms"></i>
+                <span>github</span>
+            </a>
+        
+            		
+            <a href="/index.xml"
+                
+            >
+                <i class="fas fa-rss fa-ms"></i>
+                <span>RSS</span>
+            </a>
+        
+            		
+            <a href="/contact"
+                
+            >
+                <i class="far fa-envelope"></i>
+                <span>contact</span>
+            </a>
+        
+    </nav>
+</aside>
+<main id="main">
+            <a href="javascript:void(0)" id="closebtn" onclick="navToggle()"><i class="fas fa-bars fa-lg"></i></a>
+            <div class="content">
+    
+    <h1 id="title">Git速成笔记</h1>
+    
+      
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#基本的文件管理">基本的文件管理</a></li>
+    <li><a href="#远程仓库">远程仓库</a></li>
+    <li><a href="#分支管理">分支管理</a></li>
+    <li><a href="#标签管理">标签管理</a></li>
+  </ul>
+</nav>
+    <h1 id="git">Git</h1>
+<p>git是一款<strong>分布式版本控制系统</strong>，是由Linus编写的，由此诞生了GitHub网站（2008年上线）</p>
+<h1 id="git的安装">Git的安装</h1>
+<p>安装包下载：https://github.com/gohugoio/hugo/releases</p>
+<p>安装完成后需要在Git bash中登录GitHub账号</p>
+<pre><code>$ git config --global usr.name &quot;XXX&quot;
+$ git config --blobal usr.email &quot;email&quot;
+</code></pre><p><!-- raw HTML omitted -->git init<!-- raw HTML omitted -->：在当前目录创建可管理的仓库</p>
+<h1 id="git功能与常用方法">Git功能与常用方法</h1>
+<p>Git功能可分为以下四个方面：</p>
+<ol>
+<li>基本的文件管理</li>
+<li>远程仓库</li>
+<li>分支管理</li>
+<li>标签管理</li>
+</ol>
+<h2 id="基本的文件管理">基本的文件管理</h2>
+<p><code>git add filename</code> 添加文件</p>
+<p><code>git commit -m &quot;message&quot;</code> 提交add的文件，并附带提交说明</p>
+<p><code>git status</code> 查看工作区的状态（检查是否有未提交的文件）</p>
+<p><code>git diff</code> 查看工程中的历史修改内容</p>
+<p><code>git log</code> 显示提交日志</p>
+<p><code>git reset --hard HEAD^</code> 回退到工程的上一版本（<code>HEAD~100</code> 回退100次）</p>
+<ul>
+<li><code>--hard XXXXX</code> 也可直接回退到某一版本号</li>
+<li>Git回退版本的原理：指针</li>
+<li><code>git reset HEAD filename</code> 把暂存区的修改撤销掉，回退到工作区</li>
+</ul>
+<p><code>git reflog</code> 查看自己的每次命令（有所有命令对应的版本号）</p>
+<p><code>git checkout -- filename</code> 丢弃工作区的修改（保持上一版本的内容）</p>
+<p><code>git rm filename</code> 删除文件，此后应用 <code>git commit</code> 提交一次</p>
+<h2 id="远程仓库">远程仓库</h2>
+<ul>
+<li>关联远程库
+<ul>
+<li><code>git remote add origin git@server-name:path/repo-name.git</code> 关联远程库</li>
+<li><code>git push -u origin master</code> 第一次推送master分支的内容</li>
+<li><code>git push origin master</code> 推送最新修改</li>
+</ul>
+</li>
+<li>克隆远程库
+<ul>
+<li><code>git clone git@server-name:path/repo-name.git</code> 克隆远程库</li>
+</ul>
+</li>
+</ul>
+<h2 id="分支管理">分支管理</h2>
+<p>查看分支：<code>git branch</code></p>
+<p>查看远程库信息：<code>git remote -v</code></p>
+<p>创建分支：<code>git branch name</code></p>
+<p>在本地创建和远程分支对应的分支：<code>git checkout -b branch_name origin/branch_name</code></p>
+<p>切换分支：<code>git checkout name</code> or <code>git switch name</code></p>
+<p>创建+切换分支：<code>git checkout -b name</code> or <code>git switch name</code></p>
+<p>合并某分支到当前分支：<code>git merge name</code> or <code>git merge --no-ff -m &quot;message&quot; name</code></p>
+<p>删除分支：<code>git branch -d name</code></p>
+<p>查看分支合并冲突：<code>git log --graph</code></p>
+<p>临时保存：<code>git stash</code></p>
+<p>返回临时保存工作区：<code>git stash pop</code></p>
+<p>将某次修改复制到当前分支：<code>git cherry-pick commit_id</code></p>
+<p>丢弃没有合并过的分支：<code>git branch -D name</code></p>
+<ul>
+<li>多人协作工作模式
+<ul>
+<li>推送自己的修改：<code>git push origin branch_name</code>
+<ul>
+<li>若推送失败，需试图合并：<code>git pull</code>
+<ul>
+<li>若提示<code>no tracking information</code> 则应创建本地分支与远程分支的链接关系：`git branch &ndash;set-upstream-to branch_name prigin/branch_name</li>
+<li>若合并有冲突，则解决冲突，并在本地提交</li>
+</ul>
+</li>
+<li>解决冲突或无冲突时，再推送<code>git push origin branch_name</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="标签管理">标签管理</h2>
+<p>新建标签：<code>git tag tag_name</code></p>
+<p>指定标签信息：<code>git tag -a tag_name -m &quot;message&quot;</code></p>
+<p>查看所有标签：<code>git tag</code></p>
+<p>推送本地标签：<code>git push origin tag_name</code></p>
+<p>推送所有未推送过的本地标签：<code>git push origin tag_name</code></p>
+<p>删除本地标签：<code>git tag -d tag_name</code></p>
+<p>删除远程标签：<code>git push origin :refs/tag/tag_name</code></p>
+<h1 id="github使用小结">GitHub使用小结</h1>
+<p>参考网站：https://www.liaoxuefeng.com/wiki/896043488029600</p>
+
+    
+    <div class="nav-next-prev">
+        <div class="nav-prev">
+            
+                <a class="grayed-out" href="javascript:void()"><i class="fas fa-chevron-left"></i></a>
+            
+        </div>
+        <a class="nav-top" href="#">top</i></a>
+        <div class="nav-next">
+            
+                <a href="https://littleblackrock.github.io/blog/idea%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/"><i class="fas fa-chevron-right"></i></a>
+            
+        </div>
+    </div>
+    
+
+            </div><footer>
+<div class="footer-content">
+
+  <div class="contact-info">
+      
+          <div class="footer-mail">
+          <i class="far fa-envelope"></i> <a href="mailto:1425999585@qq.com">1425999585@qq.com</a> </div>
+      
+      
+      <div class="footer-phone">
+          <i class="fas fa-phone"></i> 15626187186 
+      </div>
+      
+  </div>
+
+
+<p class="copyright meta">&amp;copy; 2021. All rights reserved.</p>
+
+</div>
+</footer></main>
+    </body>
+    <script src=https://littleblackrock.github.io/js/navbutton.js></script>
+</html>

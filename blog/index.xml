@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Qiliang Luo</title>
+    <link>https://littleblackrock.github.io/blog/</link>
+    <description>Recent content in Blogs on Qiliang Luo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2021. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 01 Mar 2021 21:15:13 +0800</lastBuildDate><atom:link href="https://littleblackrock.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>my first blog</title>
+      <link>https://littleblackrock.github.io/blog/my_first_blog/</link>
+      <pubDate>Mon, 01 Mar 2021 21:15:13 +0800</pubDate>
+      
+      <guid>https://littleblackrock.github.io/blog/my_first_blog/</guid>
+      <description>这是我的第一个自己搭建的博客，欢迎光临！ </description>
+    </item>
+    
+    <item>
+      <title>IDEA常用功能</title>
+      <link>https://littleblackrock.github.io/blog/idea%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Mon, 01 Mar 2021 21:04:08 +0800</pubDate>
+      
+      <guid>https://littleblackrock.github.io/blog/idea%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/</guid>
+      <description>IDEA快捷操作  数字.fori + Enter 执行for循环XXX次 iter + Enter 使用增强型for循环语句 shift + F6 同步选中所有指定变量（常用于修改变量名） 数字.forr + Enter 倒序执行for循环XXX次  高效率配置IDEA 代码提示不区分大小写 Settings -&amp;gt; Editor -&amp;gt; General -&amp;gt; Code Completion	Match case
+自动导包 Settings -&amp;gt; Editor -&amp;gt; General -&amp;gt; Auto Import	【中间四个全勾上】
+Ctrl+滚轮 调整字体大小 常用快捷键 IDEA快捷方式 Ctrl+Alt+T提供代码块包裹功能
+插件安装 File -&amp;gt; Setting -&amp;gt; Plugin
+ FindBugs， 代码缺陷扫描 PMD， 代码缺陷扫描 InnerBuilder， builder模式快速生成 lombok plugin， lombok插件 maven helper， maven依赖管理助手，解析结构，分析冲突 Rainbow brackets，让代码的括号更具标识性 String Manipulation，String相关辅助简化，搭配Ctrl+W、Alt+J等文本选择快捷键使用 Translation，翻译，不解释 GenerateAllSetter GenerateSerialVersionUID，Alt+Insert快速生成SerialVersionUID GsonFormat MyBatis Log Plugin，把Mybatis输出的sql日志还原成完整的sql语句 Free Mybatis，Mybatis免费的插件 RestfulToolkit    快速跳转到Restful Api处( use: Ctrl(Command) + or Ctrl + Alt + N ) 展示Resultful 接口结构 http 简单请求工具   IDEA调试快捷键  F8——逐行执行程序 F7——进入到方法中 shift+F8——跳出方法 F9——跳到下一个断点，如果没有下一个断点，就结束程序 ctrl+F2——退出Debug模式，停止程序  </description>
+    </item>
+    
+    <item>
+      <title>Git速成笔记</title>
+      <link>https://littleblackrock.github.io/blog/git%E9%80%9F%E6%88%90%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 01 Mar 2021 20:53:09 +0800</pubDate>
+      
+      <guid>https://littleblackrock.github.io/blog/git%E9%80%9F%E6%88%90%E7%AC%94%E8%AE%B0/</guid>
+      <description>Git git是一款分布式版本控制系统，是由Linus编写的，由此诞生了GitHub网站（2008年上线）
+Git的安装 安装包下载：https://github.com/gohugoio/hugo/releases
+安装完成后需要在Git bash中登录GitHub账号
+$ git config --global usr.name &amp;quot;XXX&amp;quot; $ git config --blobal usr.email &amp;quot;email&amp;quot; git init：在当前目录创建可管理的仓库
+Git功能与常用方法 Git功能可分为以下四个方面：
+ 基本的文件管理 远程仓库 分支管理 标签管理  基本的文件管理 git add filename 添加文件
+git commit -m &amp;quot;message&amp;quot; 提交add的文件，并附带提交说明
+git status 查看工作区的状态（检查是否有未提交的文件）
+git diff 查看工程中的历史修改内容
+git log 显示提交日志
+git reset --hard HEAD^ 回退到工程的上一版本（HEAD~100 回退100次）
+ --hard XXXXX 也可直接回退到某一版本号 Git回退版本的原理：指针 git reset HEAD filename 把暂存区的修改撤销掉，回退到工作区  git reflog 查看自己的每次命令（有所有命令对应的版本号）
+git checkout -- filename 丢弃工作区的修改（保持上一版本的内容）</description>
+    </item>
+    
+  </channel>
+</rss>
